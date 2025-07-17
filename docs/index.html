@@ -1,18 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Демо PHP-проекта</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевая книга на PHP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Мой PHP-проект</h1>
-        <div class="demo-alert">
-            ⚠️ GitHub Pages не поддерживает PHP. Для работы:
-            <pre><code>git clone https://github.com/Elero16/project.git
-cd project/php-version
-php -S localhost:8000</code></pre>
-</div>
-</div>
+        <header>
+            <h1>Гостевая книга</h1>
+            <p class="demo-notice">🚀 Демонстрация PHP-проекта (на GitHub Pages работает статическая версия)</p>
+        </header>
 
-</body> </html>
+        <div class="demo-container">
+            <!-- Форма (статическая имитация) -->
+            <form class="demo-form">
+                <div class="form-group">
+                    <label for="demo-name">Ваше имя:</label>
+                    <input type="text" id="demo-name" placeholder="Пример: Алексей" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="demo-message">Сообщение:</label>
+                    <textarea id="demo-message" rows="4" placeholder="Привет! Это тестовое сообщение..." disabled></textarea>
+                </div>
+                <button type="button" disabled>Отправить</button>
+            </form>
+
+            <!-- Пример сообщений -->
+            <div class="messages">
+                <h2>Как это работает в PHP-версии:</h2>
+                <div class="message">
+                    <div class="message-header">
+                        <strong>Мария</strong>
+                        <span class="date">2023-11-15 14:30</span>
+                    </div>
+                    <p>Сообщения сохраняются в файле <code>messages.txt</code> на сервере.</p>
+                </div>
+                <div class="message">
+                    <div class="message-header">
+                        <strong>Алексей</strong>
+                        <span class="date">2023-11-14 09:15</span>
+                    </div>
+                    <p>PHP обрабатывает форму и добавляет новые записи.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>Как запустить полную версию?</h2>
+            <div class="terminal">
+                <pre><code># Клонировать репозиторий
+git clone https://github.com/ваш-логин/ваш-репозиторий.git
+
+# Перейти в папку с PHP-версией
+cd ваш-репозиторий/php-version
+
+# Запустить встроенный PHP-сервер
+php -S localhost:8000
+
+# Открыть в браузере:
+http://localhost:8000</code></pre>
+            </div>
+            <p>Или используйте <a href="https://www.000webhost.com/" target="_blank">бесплатный хостинг</a> для PHP.</p>
+        </div>
+    </div>
+</body>
+</html>
